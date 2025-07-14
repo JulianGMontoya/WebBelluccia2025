@@ -10,7 +10,7 @@
 
 .tituloPrincipal { 
     font-family: 'Montserrat', sans-serif;
-    color: #883039; 
+    color: #ffffff; 
   
 }
 
@@ -66,6 +66,15 @@ body {
   padding-top: 100px;
 }
 
+
+.bgHero {
+  background: url(media/Hero.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 h1, h2, h3, h4, h5 {
   font-weight: 600;
   line-height: 1.2;
@@ -81,6 +90,10 @@ p {
   font-family: var(--font-family-montserrat);
   font-size: 1rem;
   color: #6c757d;
+}
+
+.p-blanco {
+  color: white;
 }
 
 /* Botones */
