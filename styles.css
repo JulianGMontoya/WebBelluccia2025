@@ -8,6 +8,11 @@
   --font-family-playfair: 'Playfair Display', serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .tituloPrincipal { 
     font-family: 'Montserrat', sans-serif;
     color: #ffffff; 
@@ -15,13 +20,14 @@
 }
 
 /* 2. ESTILOS GENERALES */
-body {
+body, html {
   font-family: var(--font-family-montserrat);
   color: #212529;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 
@@ -31,13 +37,13 @@ body {
 
 /* 3. NAVBAR */
 .navbar {
-  background-color: #883039;
+  background-color: #4C6663;
   transition: background-color 0.3s, box-shadow 0.3s;
   padding: 15px 0;
 }
 
 .navbar.scrolled {
-  background-color: #883039;
+  background-color: #4C6663;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -55,10 +61,23 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: #F9EA3E
 }
 
 /* 4. HERO */
+
+.color-hero {
+  color: #4C6663 !important;
+}
+
+.color-amarillo {
+  color: #F9EA3E !important;
+}
+
+.color-claro {
+  color: #F7F0F0 !important;
+}
+
 .row.p-5 {
   min-height: 90vh;
   display: flex;
@@ -67,13 +86,30 @@ body {
 }
 
 
-.bgHero {
-  background: url(media/Hero.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.section-imagen {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
+.imagen-ajustada {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.bgHero {
+  background: url(media/Hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100vw;
+}
+
+section.bgHero {
+  margin: 0;
+  padding: 0;
+}
 
 h1, h2, h3, h4, h5 {
   font-weight: 600;
@@ -97,6 +133,8 @@ p {
 }
 
 /* Botones */
+
+
 .btn {
   border-radius: 50px;
   padding: 10px 30px;
@@ -109,17 +147,19 @@ p {
 }
 
 .bg-bordeaux {
-  background-color: #880039 !important;
-  color: white;
+  background-color: #4C6663 !important;
+  color: #F7F0F0;
 }
 
 .btn-dark {
-  background-color: #883039;
+  background-color: #F9EA3E;
+  border-radius: 8px;
   border: none;
+  color:#4C6663
 }
 
 .btn-dark:hover {
-  background-color: #883039;
+  background-color: #4C6663;
 }
 
 .btn-outline-dark {
@@ -129,17 +169,205 @@ p {
 
 .btn-outline-dark:hover {
   background-color: var(--primary-color);
-  color: #fff;
+  color:#F9EA3E
 }
 
 
+.carousel-item img {
+  max-width: 200px;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.logo-card {
+  width: 220px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#faqAccordion {
+  max-width: 800px;
+}
+
+/* Fondo general del acordeón */
+.accordion-item {
+  background-color: #F7F0F0;  /* Color de fondo */
+  border: 1px solid #4C6663;  /* Borde verde oscuro */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Botón con la pregunta */
+.accordion-button {
+  background-color: #F7F0F0; /* Fondo del botón */
+  color: #4C6663;            /* Color del texto */
+  font-weight: bold;
+}
+
+/* Ícono de flecha */
+.accordion-button::after {
+  color: #4C6663;
+}
+
+/* Fondo del contenido que se expande */
+.accordion-body {
+  background-color:  #F7F0F0;
+  color: #4C6663;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #883039;
+  background-color: #F7F0F0;
   border-radius: 50%;
 }
 
 /* 5. SECCIONES */
+
+/* Eliminar cualquier overflow accidental */
+html, body {
+  overflow-x: hidden;
+}
+
+
+.footer-custom {
+  background-color: #F7F0F0;
+  color: #4C6663;
+  border-top: 3px solid #4C6663;
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #4C6663;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-custom ul li {
+  color: #4C6663;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.bg-caja-abierta {
+  background-image: url("media/fondo6.png"); 
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  padding: 60px 0; /* reduce el alto innecesario */
+  width: 100%;
+  overflow: visible;
+}
+
+.btn-custom-width {
+  max-width: 250px;
+  width: auto;
+}
+
+.bg-altagama {
+  background-image: url("media/fondo5.png"); 
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+  
+}
+
+.bg-detalle-plan {
+  background-image: url("media/fondo7.png"); 
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+   
+}
+
+.bg-del-mes {
+  background-image: url("media/fondo8.png"); 
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+   
+}
+
+.card-custom-size {
+  max-width: 320px;
+  max-height: 500px;
+  height: 100%;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.card-custom-size img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.bg-faq {
+  background-color: #F7F0F0;
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+}
+
+.bg-bodegas {
+  background-color: #4C6663;
+  
+}
+
+
+.seccion-logros {
+  background-image: url("media/fondo4.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.seccion-imagen-grande {
+  background-image: url('media/vinedo.png'); /* Cambiá el path */
+  background-size: cover;       /* Que se adapte al tamaño */
+  background-position: center;  /* Que se centre */
+  background-repeat: no-repeat; /* Que no se repita */
+  height: 600px;                /* Ajustá el alto deseado */
+  width: 100vw;                 /* Que ocupe el ancho completo */
+}
+
+.bg-como-funciona {
+  background-image: url('media/fondo1.png'); /* Cambiá esto según el path real */
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+}
+
+.bg-te-llega {
+  background-image: url('media/fondo2.png'); /* Cambiá esto según el path real */
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+}
+
+.bg-suscripcion {
+  background-image: url('media/fondo3.png'); /* Cambiá esto según el path real */
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+}
+
+.bg-nuestros-socios {
+  background-color: #F7F0F0;
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  width: 100vw;
+}
+
 section {
   padding: 100px 0;
 }
@@ -171,6 +399,17 @@ section h2::after {
   overflow: hidden;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  background-color: #F7F0F0;
+  
+    /* NUEVO: centra todo dentro de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+  min-height: 320px; /* Ajustá este valor según necesidad */
+
 }
 
 .card:hover {
@@ -201,8 +440,8 @@ section h2::after {
 
 /* 7. TESTIMONIOS */
 .blockquote {
-  background-color: var(--light-color);
-  border-left: 4px solid var(--primary-color);
+  background-color: #4C6663;
+  border-left: 4px solid #4C6663;
   padding: 20px;
   border-radius: 5px;
 }
@@ -385,8 +624,8 @@ img.rounded-circle {
 
 /* ESPACIADOS */
 .section-spacing {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .section-spacing-sm {
