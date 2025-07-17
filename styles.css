@@ -99,7 +99,7 @@ body, html {
 }
 
 .bgHero {
-  background: url(media/Hero.png);
+  background: url(media/hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
